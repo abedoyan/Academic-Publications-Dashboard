@@ -6,7 +6,7 @@ def connect_mysql():
         connection = mysql.connector.connect(
             host="localhost",
             user="root",
-            password="a6B16c95",
+            password="", #update to your own password
             database="academicworld"
         )
         #print("Database connection established successfully.")
