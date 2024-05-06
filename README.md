@@ -6,7 +6,7 @@
 
 **Purpose:** The purpose of this project was to create a user-friendly dashboard to explore various publications and data related to different research papers from an academic world dataset. The academic world dataset, which was used as the basis for all three databases used in the backend, MySQL, MongoDB, and Neo4j, includes a great amount of information about faculty members at various academic institutions and the publications that are relevant to them. One of the most valuable scenarios for using such a dataset is for research purposes. Therefore, I designed my dashboard with students and researchers as the target users. The objectives of the tool will be to help find important papers, authors, and keywords that are all relevant to what a user might be searching for when doing research for their own academic or professional purposes. 
 
-**Demo:** https://mediaspace.illinois.edu/media/t/1_zb4wy0c0
+**Demo:** https://drive.google.com/file/d/16ndMetrbs7zHqEde5Eei1AWZ6VbXxstI/view?usp=sharing
 
 **Installation:** Installation involved first uploading the given Academic World dataset into the three databases used in the backend application, namely MySQL, MongoDB, and Neo4j. No modifications were made to the dataset before storing the dataset into the databases and therefore, project testers will not need to make any updates on their end before being able to test the application. To start the application, simply run the app.py file and follow the http link.
 
@@ -36,28 +36,12 @@
 
 **Database Techniques:** The application uses three database techniques, indexing, constraints, and views. Indexes were used in the MySQL database to improve the performance of the MySQL queries. I created indexes for the columns that my queries referred to the most, such as faculty name, publication title, and keyword name. I ran the create index statements directly from the terminal, as opposed to through my python file. 
 
-![image](https://github.com/CS411DSO-SP24/ArdaBedoyan/assets/111945641/9d8aaa36-f188-48f6-b788-01b8d9774e06)
+![MySQL Indexing_Check](https://github.com/abedoyan/Academic-Publications-Dashboard/assets/111945641/664d44ab-8d32-4793-b9f2-2f47d2b830fa)
+
 
 In Neo4j, I implemented constraints to ensure certain properties of some of my nodes in the graph database. The last widget in the dashboard allows a user to add a new author to a publication. To ensure that the new authors being added to the dataset were unique, I created a constraint that the faculty name must be unique. I also created another constraint the name of the affiliated university entered must be a string. These constraints were created in Neo4j desktop.
 
-![image](https://github.com/CS411DSO-SP24/ArdaBedoyan/assets/111945641/78758640-0db8-4269-ba2d-131075daa272)
+![Neo4j Constraints](https://github.com/abedoyan/Academic-Publications-Dashboard/assets/111945641/10d817de-4283-4cf7-be53-63210abd9f0d)
+
 
 The final database technique I implemented was a view in my MongoDB database. I created a function directly in the mongodb_utils.py file using the create_collection() function to create a view called “pubs_year_view” of the number of publications by year. This view was used in the pubs_year() function to return the number of publications based on a year that the dashboard user entered.
-
-**Extra-Credit Capabilities:** Not applicable to this project.
-
-**Contributions:** As this was a solo project, I worked on the full end-to-end application development on my own. Below is a breakdown of tasks done and time spent per task.
-
-| Task	| Time Spent |
-| ---- | ------- |
-| Refamiliarizing myself with the Academic World dataset | 30 minutes |
-| Deciding on the objectives of the application and what widgets to include | 30 minutes |
-| Reading through documentation and learning to program with Dash	| 2 hours |
-| Creating a basic app.py file | 1 hour |
-| Creating mysql_utils.py file, connecting to MySQL, and adding MySQL widgets to app.py | 5 hours |
-| Creating mongodb_utils.py file, connecting to MongoDB, and adding MongoDB widgets to app.py | 8 hours |
-| Creating neo4j_utils.py file, connecting to Neo4j, and adding Neo4j widgets to app.py | 10 hours |
-| Deciding on and adding database techniques | 2 hours |
-| Fixing the layout of the dashboard | 5 hours |
-| Writing the supporting documentation/README | 2 hours |
-| Creating the demo video | 2 hours |
