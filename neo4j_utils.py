@@ -27,7 +27,7 @@ class Neo4jConnection:
 
 # Initialize URI, username, and password
 connection = Neo4jConnection(uri="bolt://localhost:7687",
-                       user="neo4j", pwd="a6B16c95")
+                       user="neo4j", pwd="") #update to your own password
 
 
 # query to get the most popular keywords by # sum of keyword score
